@@ -20,22 +20,28 @@ ul {
     color: var(--fontcolor);
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+a:hover {
+    color: var(--lightblue);
+
+}
+
 .resume {
     border-radius: 5%;
     border: 1px solid var(--lightblue);
     padding: 0.5rem 1.25rem 0.5rem 1.25rem;
     color: var(--lightblue);
+    background-color: var(--lightblue) transparent;
+    opacity: 1;
 }
 
 .resume:hover {
-    background-color: var(--lightblue);
-    color: var(--darkblue);
+    color: var(--lightblue);
     transition: 500ms;
-}
-
-
-a {
-    color: inherit;
-    text-decoration: none;
-    font-size: 2rem;
+    background-color: var(--hovercolor);
 }

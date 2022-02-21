@@ -1,0 +1,41 @@
+.sidebar-l {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 7.7rem;
+    height: 30rem;
+    position: fixed;
+    bottom: 0;
+}
+.sidebar-l__item {
+    height: 3.5rem;
+    bottom: 0;
+}
+
+.sidebar-l__item img {
+    filter: invert(78%) sepia(25%) saturate(270%) hue-rotate(188deg) brightness(88%) contrast(90%);
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+}
+
+.sidebar-l__item img:hover {
+    filter: invert(97%) sepia(90%) saturate(697%) hue-rotate(83deg) brightness(95%) contrast(113%);
+    cursor: pointer;
+    transform: translate(0em , -0.3rem);
+    transition: 0.3s;
+}
+.sidebar-l__item2 div {
+    transform: rotate(90deg);
+    color:var(--lightblue);
+    height: 3rem;
+}
+@media screen and (max-height: 340px)
+{
+    .sidebar-l {
+        transform: rotate(90deg);
+        color:var(--lightblue);
+        position: absolute;
+        display: none;
+    }
+}
