@@ -1,0 +1,29 @@
+.nav-headerRes {
+    padding: 0 24px;
+    border-bottom: 1px solid var();
+    border: 1px solid red;
+}
+
+.ul-headerRes {
+    list-style: none;
+    display: flex;
+    flex-grow: 5;
+    flex-flow: column wrap;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    text-decoration: none;
+    box-shadow: none;
+    color: var(--fontcolor);
+}
+
+.a-headerRes {
+    color: inherit;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.a-headerRes:hover {
+    color: var(--lightblue);
+
+}
