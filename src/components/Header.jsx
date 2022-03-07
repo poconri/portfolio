@@ -1,14 +1,15 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { animated, config, useTrail } from '@react-spring/web';
 import '@styles/Header.css';
+import { LogoContainer } from "./Navbar.elements";
 
 const Header = () => {
     const springUpDown = useTrail(5, {
         from: { top: -100 , position:'absolute', opacity:0},
         to: { top: 0 , position:'relative', opacity:1},
         delay: 200,
-        config: config.wobbly,
+        config: config.gentle,
     })
     return (
         <header>
