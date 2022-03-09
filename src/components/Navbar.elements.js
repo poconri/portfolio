@@ -54,14 +54,15 @@ export const Menu = styled.ul`
             display:flex;
             background-color: #23394d;
             position: absolute;
-            top: 70px;
-            right: ${({open}) => open ? '0' : '-106%'}; //Import
+            top: 5rem;
+            right: ${({open}) => open ? '0' : '-150%'}; //Import
             width: 100%;
             height: 90vh;
             justify-content: flex-start;
             flex-direction: column;
             align-items: center;
             transition: 0.5s all ease;
+            padding: 0;
     }
 `;
 
@@ -155,10 +156,10 @@ export const MenuItemResume = styled(animated.a)`
     font-weight: 300;
     cursor: pointer;
     border: 2px solid var(--lightblue);
+    border-radius: 5px;
 
     &:hover {
         color: var(--lightblue);
-
     div{
         svg{
             fill: #23394d;
@@ -217,7 +218,7 @@ export const MenuItemResume = styled(animated.a)`
     }
 `;
 
-export const MobileIcon = styled.div`
+export const MobileIcon = styled(animated.div)`
     display: none;
     
     @media screen and (max-width: 960px) {

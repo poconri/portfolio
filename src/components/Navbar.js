@@ -2,16 +2,15 @@ import React, {useState} from "react";
 import { Container, LogoContainer, Menu, MenuItem, MenuItemLink, MenuItemResume, MobileIcon, Wrapper } from "./Navbar.elements";
 import { FaReact, FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import { animated, config, useTrail } from '@react-spring/web';
+import { config, useTrail } from '@react-spring/web';
 
 const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     const springUpDown = useTrail(6, {
-        from: { top: -100 , position:'absolute', opacity:0},
-        to: { top: 0 , position:'relative', opacity:1},
-        delay: 200,
-        config: config.default,
+        from: {  opacity:0, transform: 'translateY(-100%)' },
+        to: {  opacity:1, transform: 'translateY(0%)' },
+        config: config.gentle
     })
 
     return (
@@ -20,9 +19,9 @@ const Navbar = () => {
                 <IconContext.Provider value={{style:{fontSize: "3rem"}}}>
                 <LogoContainer style={ springUpDown[0] }>
                     <FaReact />
-                    <p>Ramon Pocón</p>
+                    <p>RP</p>
                 </LogoContainer>
-                <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}  >
+                <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}  style={ springUpDown[1] }>
                     { !showMobileMenu ? <FaBars /> : <FaTimes /> } 
                 </MobileIcon>
                 <Menu open={showMobileMenu}>
