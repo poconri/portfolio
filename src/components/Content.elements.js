@@ -3,10 +3,11 @@ import { animated } from '@react-spring/web';
 
 
 export const Container = styled.div`
+    margin-top: -7rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 92.5vh;
+    height: 100vh;
     width: 100vw;
     
     
@@ -21,18 +22,12 @@ export const Container = styled.div`
         color: #ccd6f6;
         margin: 0;
     }
-    h1:nth-child(3) {
+    p:nth-child(3) {
         color: #8892b0;
-        -webkit-box-reflect: below 1px linear-gradient(transparent, var(--lightblue));
-        overflow: hidden;
-        width: 19ch;
-        animation: typing 4s steps(19) infinite;
+        font-size: 2rem;
+        margin: 0;
     }
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-    }
+    
 }
 `;
 

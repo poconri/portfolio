@@ -24,6 +24,9 @@ export const Container = styled(animated.div)`
     @media (max-height: 500px) {
         display: none;
     }
+    @media (max-width: 550px) {
+        display: none;
+    }
 `;
 
 export const Icon = styled(animated.div)`
