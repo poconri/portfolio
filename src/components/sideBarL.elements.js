@@ -12,14 +12,16 @@ export const Container = styled(animated.div)`
     position: fixed;
     bottom: 0;
     
+
     svg {
         color: var(--fontcolor);
+        transition: transform 0.3s ease-in-out;
     }
     svg:hover {
         color: var(--lightblue);
         cursor: pointer;
         transform: translateY(-0.3rem);
-        transition: all 0.3s ease-in-out;
+        
     }
     @media (max-height: 500px) {
         display: none;

@@ -12,6 +12,7 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     font-family: 'Titillium Web', sans-serif;
+    overflow-x: hidden;
 }
 
 body {
@@ -19,5 +20,25 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--darkblue);
-    overflow-y: hidden;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #53535a;
+}
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+  /* *::-webkit-scrollbar-track {
+    background: #c1c4cd;
+  } */
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #53535a;
+    border-radius: 1rem;
 }
