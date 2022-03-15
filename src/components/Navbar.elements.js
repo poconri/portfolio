@@ -52,21 +52,20 @@ export const Menu = styled.ul`
     align-items: center;
 
     @media screen and (max-width: 960px) {
-        @media screen and (max-width: 960px) {
-            display:flex;
-            background-color: #23394d;
-            position: absolute;
-            top: 5rem;
-            right: ${({open}) => open ? '0' : '-150%'}; //Import
-            width: 100%;
-            height: 100vh;
-            justify-content: flex-start;
-            flex-direction: column;
-            align-items: center;
-            transition: 0.5s all ease;
-            padding: 0;
-            z-index: 2;
-            position: fixed;
+        display:flex;
+        background-color: #23394d;
+        position: absolute;
+        top: 5rem;
+        right: ${({open}) => open ? '0' : '-150%'}; //Import
+        width: 100%;
+        height: 100vh;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.5s all ease;
+        padding: 0;
+        z-index: 2;
+        position: fixed;
     }
 `;
 
@@ -114,10 +113,12 @@ export const MenuItemResume = styled(animated.li)`
     transition: 0.5s background ease;
 
     &:hover {
-        background: #112240;
+        background: #123040; 
 }
     @media screen and (max-width: 960px) {
-    
+        &:hover {
+        background: #23394d;
+    }
     }
 `;
 

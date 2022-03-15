@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useContext } from "react/cjs/react.production.min";
 
 const AppContext = React.createContext();
 

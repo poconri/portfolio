@@ -1,15 +1,15 @@
 import React from "react";
-import { Container } from "./About.elements";
+import { Container } from "./Skills.elements";
 
 
-const About = () => {
+const Skills = () => {
     return (
         <>
             <Container>
-                <h1>About</h1>
+                <h1>Skills</h1>
             </Container>
         </>
     );
 }
 
-export default About;
+export default Skills;

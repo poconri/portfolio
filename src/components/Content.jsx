@@ -1,14 +1,17 @@
-import React, {useState, useEffect } from "react";
+import React from "react";
 import { Container, Presentation } from "./Content.elements";
 import TypeAnimation from 'react-type-animation';
 
 
 const Content = () => {
-    let text1 = ``;
-    let text2 = `I'm a javaScript dev`;
-    let text3 = `I love React`;
-    let text4 = `Welcome to my portfolio...`;
-    let delay = 2500;
+    let text = [
+        ``,
+        `I'm a javaScript dev`,
+        `I love React`,
+        `Welcome to my portfolio...`,
+        ];
+
+        let duration = 2500;
 
     return (
         <Container>
@@ -18,18 +21,17 @@ const Content = () => {
                 <TypeAnimation
                     cursor={true}
                     sequence={[
-                        text1,
-                        delay,
-                        '',
-                        text2,
-                        delay,
-                        '',
-                        text3,
-                        delay,
-                        '',
-                        text4,
-                        delay,
-                        '',
+                        text[0],
+                        duration,
+                        text[1],
+                        duration,
+                        text[0],
+                        text[2],
+                        duration,
+                        text[0],
+                        text[3],
+                        duration,
+                        text[0],
                         ]}
                     wrapper="p"
                     repeat = {Infinity}

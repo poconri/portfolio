@@ -34,29 +34,29 @@ const Navbar = () => {
                 </MobileIcon>
                 <Menu open={statusMenu}>
                     <MenuItem>
-                        <MenuItemLink onClick={() => onClickMenu } style={ springUpDown[2] } >
+                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[2] } >
                             About
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink onClick={() => onClickMenu } style={ springUpDown[3] } >
-                            Technologies
+                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[3] } >
+                            Skills
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink onClick={() => onClickMenu } style={ springUpDown[4] } >
+                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[4] } >
                             Projects
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItem>
-                        <MenuItemLink onClick={() => onClickMenu } style={ springUpDown[5] } >
+                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[5] } >
                             Contact me
                         </MenuItemLink>
                     </MenuItem>
                     <MenuItemResume style={ springUpDown[6] } >
-                        <MenuItem onClick={() => onClickMenu } style={ springUpDown[6] } >
+                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[6] } >
                             Resume
-                        </MenuItem>
+                        </MenuItemLink>
                     </MenuItemResume>
                 </Menu>
                 </IconContext.Provider>
