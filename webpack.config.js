@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/',
+        publicPath: './',
     },
     mode: 'development',
     resolve: {
@@ -31,15 +31,15 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
-                }
+                },
             },
             {
                 test: /\.html$/,
                 use:[
                     {
                         loader: 'html-loader'
-                    }
-                ]
+                    },
+                ],
             },
             {
                 test: /\.(css|scss)$/,
