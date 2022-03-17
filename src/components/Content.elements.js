@@ -9,8 +9,6 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
     width: 100vw;
-    
-    
 
     p:nth-child(1) {
         font-size: 1.6rem;
@@ -31,6 +29,9 @@ export const Container = styled.div`
 }
 `;
 
-export const Presentation = styled(animated.div)`
-
+export const Presentation = styled(animated.section)`
+    @media (max-width: 768px) {
+        display: block;
+        padding: 0 0 0 20%;
+    }
 `;
