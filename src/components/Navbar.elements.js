@@ -4,15 +4,18 @@ import { animated } from '@react-spring/web';
 export const Container = styled.div`
     width: 100%;
     height: 7rem;
+    
 `;
 
 export const Wrapper = styled.div`
     width: 100%;
-    height: 100%;
+    height: 7rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: auto;
+    z-index: 1;
+    position: ${({navBarPosition}) => navBarPosition ? 'fixed' : 'block'};
+    background-color: var(--darkblue);
 `;
 
 export const LogoContainer = styled(animated.div)`
@@ -44,12 +47,11 @@ export const LogoContainer = styled(animated.div)`
 `;
 
 export const Menu = styled.ul`
-    height: 100%;
     display: flex;
-    padding-right: 2rem;
     list-style: none;
     justify-content: center;
     align-items: center;
+    padding-right: 2rem;
 
     @media screen and (max-width: 960px) {
         display:flex;
@@ -106,7 +108,7 @@ export const MenuItemResume = styled(animated.li)`
     font-weight: 300;
     cursor: pointer;
     height: 3.8rem;
-    padding: 0 0 0.2rem 0;
+    padding: 0 0 0.3rem 0;
     width: 9rem;
     border: 1px solid var(--lightblue);
     border-radius: 5px;
@@ -116,6 +118,9 @@ export const MenuItemResume = styled(animated.li)`
         background: #123040; 
 }
     @media screen and (max-width: 960px) {
+
+        margin-top: 2rem;
+
         &:hover {
         background: #23394d;
     }

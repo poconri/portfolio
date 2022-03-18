@@ -23,6 +23,11 @@ export const Container = styled(animated.div)`
         transform: translateY(-0.3rem);
         
     }
+
+    @media (max-height: 900px) {
+        height: 22rem;
+    }
+
     @media (max-height: 500px) {
         display: none;
     }
