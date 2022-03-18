@@ -8,6 +8,7 @@ import { AppContextProvider } from "../context/AppContext";
 import '@styles/Global.css';
 import SideBarL from "@components/SideBarL";
 import GlobalCss from "../styles/global.css";
+import ContactMe from "@components/ContactMe";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
                 <SideBarL />
                 <About />
                 <Skills />
+                <ContactMe />
             </AppContextProvider>
         </>
     );

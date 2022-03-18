@@ -21,6 +21,7 @@ export const IconWrapper = styled.section`
     flex-wrap: wrap;
     padding-left: 20%;
     padding-right: 20%;
+    gap: 5rem;
     svg {
         &:nth-child(1) {
             color: #dd4b25;
@@ -36,7 +37,7 @@ export const IconWrapper = styled.section`
             color: #00d9ff;
         }
         &:nth-child(5) {
-            color: white;
+            color: var(--fontcolor);
         }
     }
 `;
