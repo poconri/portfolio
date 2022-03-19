@@ -21,23 +21,52 @@ export const IconWrapper = styled.section`
     flex-wrap: wrap;
     padding-left: 20%;
     padding-right: 20%;
-    gap: 5rem;
+    gap: 4rem;
+    
     svg {
+        transition: transform 0.5s ease-in-out;
+
         &:nth-child(1) {
             color: #dd4b25;
+
+            &:hover {
+                transform: scale(1.5);
+            }
         }
         &:nth-child(2) {
             color: #0170ba;
+
+            &:hover {
+                transform: scale(1.5);
+            }
         }
         &:nth-child(3) {
             background: black;
             color: #f5de19;
+
+            &:hover {
+                transform: scale(1.5);
+            }
         }
         &:nth-child(4) {
             color: #00d9ff;
+
+            &:hover {
+                transform: scale(1.5);
+            }
         }
         &:nth-child(5) {
             color: var(--fontcolor);
+
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+        &:nth-child(6) {
+
+            &:hover {
+                transform: scale(1.5);
+            }
         }
     }
 `;

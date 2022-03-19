@@ -89,13 +89,11 @@ export const MenuItemLink = styled(animated.a)`
     padding: 0.5rem 2.5rem;
     color: var(--fontcolor);
     font-size: 2rem;
-    font-weight: 300;
     cursor: pointer;
     transition: 0.5s color ease;
 
     &:hover {
         color: var(--lightblue);
-        
     }
 `;
 
@@ -105,7 +103,6 @@ export const MenuItemResume = styled(animated.li)`
     align-items: center;
     color: var(--lightblue);
     font-size: 2rem;
-    font-weight: 300;
     cursor: pointer;
     height: 3.8rem;
     padding: 0 0 0.3rem 0;

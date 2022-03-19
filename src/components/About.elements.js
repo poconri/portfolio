@@ -8,7 +8,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     h1 {
-        font-size: 2.5rem;
+        font-size: 5rem;
         color: #ccd6f6;
     }
 `;

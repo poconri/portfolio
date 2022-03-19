@@ -30,7 +30,6 @@ export const ContactMeWrapper = styled.div`
     align-items: center;
     color: var(--lightblue);
     font-size: 2rem;
-    font-weight: 300;
     cursor: pointer;
     height: 4rem;
     width: 12rem;
