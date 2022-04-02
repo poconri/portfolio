@@ -10,6 +10,9 @@ const Navbar = () => {
 
     const scrollToTop = (props) => window.scrollTo({top: props, behavior: 'smooth'});
 
+    const boxShadow = `box-Shadow`;
+    const [scroll, setScroll] = useState(0);
+
     const {
         statusMenu,
         setStatusMenu,
@@ -22,17 +25,20 @@ const Navbar = () => {
     const springUpDown = useTrail(7, {
         from: {  opacity:0, transform: 'translateY(-100%)' },
         to: {  opacity:1, transform: 'translateY(0%)'},
-        config: config.gentle
+        config: config.default,
     })
 
     const [scrollY, setScrollY] = useState(0); //this is the scroll position
     const [scrollYF, setScrollYFPrev] = useState(false); //this is the scroll position
+
     const changeNavbar = () => {
         if(scrollY > window.scrollY) {
             setScrollYFPrev(true);
+            setScroll(0.1);cd 
         } else {
             setScrollYFPrev(false);
             setScrollY(window.scrollY);
+            setScroll(0);
         }
     }
 
@@ -45,7 +51,7 @@ const Navbar = () => {
 
     return (
         <Container>
-            <Wrapper navBarPosition={ scrollYF }>
+            <Wrapper navBarPosition={ scrollYF } style= { { boxShadow: `0px 10px 5px 0px rgba(0,0,0,${scroll})` }}>
                 <IconContext.Provider value={{style:{fontSize: "3rem"}}}>
                 <LogoContainer style={ springUpDown[0] }>
                     <FaReact />
