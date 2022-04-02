@@ -19,8 +19,8 @@ export const Container = styled.div`
 export const IconWrapper = styled.section`
     display: flex;
     flex-wrap: wrap;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
     gap: 4rem;
     
     svg {
