@@ -4,18 +4,18 @@ import { Container, LogoContainer, Menu, MenuItem, MenuItemLink, MenuItemResume,
 import { FaReact, FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { config, useTrail } from '@react-spring/web';
-import { useWindowScroll } from "react-use";
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
 
     const scrollToTop = (props) => window.scrollTo({top: props, behavior: 'smooth'});
-
+    
     const boxShadow = `box-Shadow`;
     const [scroll, setScroll] = useState(0);
 
     const {
         statusMenu,
-        setStatusMenu,
+        setStatusMenu
     } = React.useContext(AppContext);
     
     const onClickMenu = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
     const changeNavbar = () => {
         if(scrollY > window.scrollY) {
             setScrollYFPrev(true);
-            setScroll(0.1);cd 
+            setScroll(0.1);
         } else {
             setScrollYFPrev(false);
             setScrollY(window.scrollY);
@@ -44,7 +44,10 @@ const Navbar = () => {
 
     function aboutFunction() {
         onClickMenu();
-        scrollToTop(0);
+    }
+
+    function logoFunction() {
+        scrollToTop( 0 );
     }
 
     window.addEventListener('scroll', changeNavbar);
@@ -54,32 +57,32 @@ const Navbar = () => {
             <Wrapper navBarPosition={ scrollYF } style= { { boxShadow: `0px 10px 5px 0px rgba(0,0,0,${scroll})` }}>
                 <IconContext.Provider value={{style:{fontSize: "3rem"}}}>
                 <LogoContainer style={ springUpDown[0] }>
-                    <FaReact />
-                    <p>RP</p>
+                    <FaReact onClick={ logoFunction } />
+                    <p onClick={ logoFunction } >RP</p>
                 </LogoContainer>
                 <MobileIcon onClick={ onClickMenu }  style={ springUpDown[1] }>
                     { !statusMenu ? <FaBars /> : <FaTimes /> } 
                 </MobileIcon>
                 <Menu open={statusMenu}>
-                    <MenuItem>
-                        <MenuItemLink onClick={ aboutFunction } style={ springUpDown[2] } >
-                            About
-                        </MenuItemLink>
+                    <MenuItem style={ springUpDown[2] }>
+                            <Link to="AboutPart" onClick={ onClickMenu }>
+                                About
+                            </Link>
                     </MenuItem>
-                    <MenuItem>
-                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[3] } >
+                    <MenuItem style={ springUpDown[3] } >
+                        <Link to="SkillPart" onClick={ onClickMenu }>
                             Skills
-                        </MenuItemLink>
+                        </Link>
                     </MenuItem>
-                    <MenuItem>
-                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[4] } >
+                    <MenuItem style={ springUpDown[4] }>
+                        <Link onClick={ onClickMenu }  >
                             Projects
-                        </MenuItemLink>
+                        </Link>
                     </MenuItem>
-                    <MenuItem>
-                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[5] } >
+                    <MenuItem style={ springUpDown[5] }>
+                        <Link to="ContactPart" onClick={ onClickMenu }  >
                             Contact me
-                        </MenuItemLink>
+                        </Link>
                     </MenuItem>
                     <MenuItemResume style={ springUpDown[6] } >
                         <MenuItemLink onClick={ onClickMenu } style={ springUpDown[6] } >

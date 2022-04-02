@@ -4,7 +4,7 @@ import { ContactMeWrapper, Container } from "./contactMe.elements";
 const ContactMe = () => {
     let email = `pocon.ri@gmail.com`
     return (
-        <Container>
+        <Container id="ContactPart">
             <p> Did you like what you saw?</p>
             <ContactMeWrapper>
                 <a href={`mailto:${email}`}>Contact Me</a>

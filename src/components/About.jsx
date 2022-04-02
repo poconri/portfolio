@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Container } from "./About.elements";
+
 
 
 const About = () => {
     return (
         <>
-            <Container>
+            <Container id="AboutPart">
                 <h1>About</h1>
                 <p>For the last year I have been learning to program in <em>JavaScript</em> as primary programing language, I begun study
     the history of computers and logical thinking, how a Linux

@@ -27,10 +27,12 @@ export const LogoContainer = styled(animated.div)`
     p {
         &:nth-child(2) {
             color: var(--fontcolor);
+            cursor: pointer;
         }
 }
     svg {
         fill: var(--lightblue);
+        cursor: pointer;
         margin-right: 0.5rem;
         -webkit-transition: spin 5s linear infinite;
         -moz-transition: spin 5s linear infinite;
@@ -71,7 +73,7 @@ export const Menu = styled.ul`
     }
 `;
 
-export const MenuItem = styled.li`
+export const MenuItem = styled(animated.li)`
     height: 50%;
     display: flex;
     align-items: center;
@@ -80,6 +82,19 @@ export const MenuItem = styled.li`
         display: flex;
         justify-content: ce;
         align-items: center;
+    }
+    a{
+        display: flex;
+
+    padding: 0.5rem 2.5rem;
+    color: var(--fontcolor);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.5s color ease;
+
+    &:hover {
+        color: var(--lightblue);
+    }
     }
 `;
 

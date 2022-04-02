@@ -10,7 +10,7 @@ import { FcLinux } from "react-icons/fc";
 const Skills = () => {
     return (
         <>
-            <Container>
+            <Container id="SkillPart">
                 <IconContext.Provider value={{style:{fontSize: "10rem"}}}>
                     <h1>Skills</h1>
                     <IconWrapper>
