@@ -5,9 +5,9 @@ import { Container } from "./About.elements";
 
 const About = () => {
     return (
-        <>
+        <div id="AboutPart">
             <Container>
-                <h1 id="AboutPart">About</h1>
+                <h1>About</h1>
                 <p>For the last year I have been learning to program in <em>JavaScript</em> as primary programing language, I begun study
     the history of computers and logical thinking, how a Linux
     based console works, the bases of <em>Git</em> and <em>GitHub</em> and
@@ -17,7 +17,7 @@ const About = () => {
     the <em>Asynchronous</em> part of the language, Arrays and
     Objects(Prototypes), <em>ECMA script6+</em>(Vanilla JavaScript) and the bases of <em>TypeScript</em>. I'm dedicated to frontEnd Development and my favorite Library its <em>React</em>.</p>
             </Container>
-        </>
+        </div>
     );
 }
 

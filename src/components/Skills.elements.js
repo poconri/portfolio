@@ -22,6 +22,7 @@ export const IconWrapper = styled.section`
     padding-left: 7.5rem;
     padding-right: 7.5rem;
     gap: 4rem;
+    justify-content: space-between;
     
     svg {
         transition: transform 0.5s ease-in-out;
