@@ -8,6 +8,13 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
 
+    const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    };
+
+    let cvLink = `https://drive.google.com/file/d/14gXqtg_p3m6eI9eqEQhT7eAevFgLcygz/view?usp=sharing`;
+
     const scrollToTop = (props) => window.scrollTo({top: props, behavior: 'smooth'});
     
     const boxShadow = `box-Shadow`;
@@ -85,7 +92,7 @@ const Navbar = () => {
                         </Link>
                     </MenuItem>
                     <MenuItemResume style={ springUpDown[6] } >
-                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[6] } >
+                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[6] } onClick={ () => openInNewTab(cvLink) }>
                             Resume
                         </MenuItemLink>
                     </MenuItemResume>

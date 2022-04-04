@@ -105,6 +105,7 @@ export const MenuItemLink = styled(animated.a)`
     color: var(--fontcolor);
     font-size: 2rem;
     cursor: pointer;
+    text-decoration: none;
     transition: 0.5s color ease;
 
     &:hover {
