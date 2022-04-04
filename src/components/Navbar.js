@@ -49,8 +49,9 @@ const Navbar = () => {
         }
     }
 
-    function aboutFunction() {
+    function resumeFunction() {
         onClickMenu();
+        openInNewTab(cvLink);
     }
 
     function logoFunction() {
@@ -92,7 +93,7 @@ const Navbar = () => {
                         </Link>
                     </MenuItem>
                     <MenuItemResume style={ springUpDown[6] } >
-                        <MenuItemLink onClick={ onClickMenu } style={ springUpDown[6] } onClick={ () => openInNewTab(cvLink) }>
+                        <MenuItemLink onClick={ resumeFunction } style={ springUpDown[6] }>
                             Resume
                         </MenuItemLink>
                     </MenuItemResume>
